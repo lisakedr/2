@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Название страницы</title>
+</head>
+
+<body>
+
+    <script>
+
+        //1 вопрос
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 инкремент в префиксной формне ++ увеличивает переменную на единицу
+        d = b++; alert(d);           // 1 инкремент в постфиксной формне ++ увеличивает переменную на единицу
+        c = (2+ ++a); alert(c);      // 5 после первого выражения переменная а=2, поэтому здесь ++а=3, и 2+3=5
+        d = (2+ b++); alert(d);      // 4 после второго выражения переменная b=1, поэтому здесь b++=2, и 2+2=4
+        alert(a);                    // 3 после третьего выражение переменная а=3
+        alert(b);                    // 3 после четвёртого выражения переменная b=3
+
+        //2 вопрос
+
+        var a = 2;
+		var x = 1 + (a *= 2); //  *= это сокращенный оператор, полностью он будет выглядеть x=1+(a=a*2), поэтому х=5
+
+        //3 вопрос
+
+        var a = 5;
+		var b = 3;
+
+		if (a > 0 && b > 0){
+		x = a - b;
+		alert(x);
+		} else if (a < 0 && b < 0){
+			x = a * b;
+			alert (x);
+			}
+		  else if (a > 0 && b < 0 || a < 0 && b > 0) {
+		  x = a + b;
+		  alert (x);
+		  }
+
+        //4 вопрос
+
+        a = +prompt ("Введите число от 1 до 15");
+
+		switch (a) {
+		case 1:
+			alert ( 'Ваше число 1');
+			break;
+		case 2:
+			alert ( 'Ваше число 2');
+			break;
+		case 3:
+			alert ( 'Ваше число 3');
+			break;
+		case 4:
+			alert ( 'Ваше число 4');
+			break;
+		case 5:
+			alert ( 'Ваше число 5');
+			break;
+		case 6:
+			alert ( 'Ваше число 6');
+			break;
+		case 7:
+			alert ( 'Ваше число 7');
+			break;
+		case 8:
+			alert ( 'Ваше число 8');
+			break;
+		case 9:
+			alert ( 'Ваше число 9');
+			break;
+		case 10:
+			alert ( 'Ваше число 10');
+			break;
+		case 11:
+			alert ( 'Ваше число 11');
+			break;
+		case 12:
+			alert ( 'Ваше число 12');
+			break;
+		case 13:
+			alert ( 'Ваше число 13');
+			break;
+		case 14:
+			alert ( 'Ваше число 14');
+			break;
+		case 15:
+			alert ( 'Ваше число 15');
+			break;	
+		}	
+        
+
+        //5 задание
+
+        var a = 6;
+		var b = 14;
+
+		function plus(a, b) {
+    		return a + b;
+		}
+
+		function minus(a, b) {
+    		return a - b;
+		}
+
+		function div (a, b) {
+    		return a / b;
+		}
+
+		function mult (a, b) {
+    		return a + b;
+		}
+
+        //6 задание
+
+        function mathOperation(arg1, arg2, operation){
+    			switch(operation){
+       				 case 'сложение':
+           				 return arg1 + arg2;
+           				 break;
+       				 case 'вычитание':
+           				 return arg1 - arg2;
+            			 break;
+        			 case 'деление':
+                      			 return arg1 / arg2;
+            			 break;
+       				 case 'умножение':
+           				 return arg1 * arg2;
+            			 break;
+   				}
+		}
+
+        //7 задание
+
+        alert( null > 0 );  // (1) false
+        alert( null == 0 ); // (2) false
+        alert( null >= 0 ); // (3) true
+
+        /*Причина в том, что нестрогое равенство и сравнения > < >= <= работают по-разному. 
+        Сравнения преобразуют null в число, рассматривая его как 0. Поэтому выражение (3) null >= 0 истинно, а null > 0 ложно.
+        С другой стороны, для нестрогого равенства == значений undefined и null действует особое правило: 
+        эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому. Поэтому (2) null == 0 ложно. */
+
+        //Задание 8 
+
+    /*    
+        function power($val, $pow)
+	{
+		if ($val == 0)
+		return 0;
+		elseif ($pow == 0)
+		return 1;
+		elseif ($pow < 0)
+		return power(1/$val, -$pow);
+		else
+		return $val *  power($val, $pow-1);
+	}
+	echo power(3, -2);
+    */
+
+
+    </script>    
+
+
+</body>
+
+</html>
